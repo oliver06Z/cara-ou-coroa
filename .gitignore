@@ -1,0 +1,8 @@
+out/
+bin/
+*.class
+fontes.txt
+.idea/
+.vscode/
+*.iml
+.DS_Store
