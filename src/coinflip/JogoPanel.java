@@ -34,8 +34,8 @@ public class JogoPanel extends JPanel {
     private final JLabel lblSequencia = estatistica();
     private final JLabel lblRecorde = estatistica();
     private final JLabel lblTaxa = estatistica();
-    private final JButton btnCara = botao("😀  CARA");
-    private final JButton btnCoroa = botao("👑  COROA");
+    private final JButton btnCara = botao("  CARA");
+    private final JButton btnCoroa = botao("  COROA");
     private final JButton btnReiniciar = new JButton("Reiniciar");
 
     public JogoPanel(Jogo jogo) {
@@ -44,7 +44,7 @@ public class JogoPanel extends JPanel {
         setBackground(FUNDO);
         setBorder(BorderFactory.createEmptyBorder(16, 20, 16, 20));
 
-        JLabel titulo = new JLabel("🪙 Cara ou Coroa da Sorte", SwingConstants.CENTER);
+        JLabel titulo = new JLabel(" Cara ou Coroa da Sorte", SwingConstants.CENTER);
         titulo.setFont(new Font("SansSerif", Font.BOLD, 22));
         titulo.setForeground(PRIMARIA);
         add(titulo, BorderLayout.NORTH);
@@ -121,14 +121,14 @@ public class JogoPanel extends JPanel {
         StringBuilder sb = new StringBuilder();
         if (r.acertou()) {
             mensagem.setForeground(VERDE);
-            sb.append("Deu ").append(r.sorteado()).append("! Você acertou 🎉");
+            sb.append("Deu ").append(r.sorteado()).append("! Você acertou ");
             if (r.subiuDeNivel()) {
                 sb.append("  ⬆ Nível ").append(jogo.getNivel()).append("! A moeda mudou de humor: ")
                         .append(jogo.getHumor());
             }
         } else {
             mensagem.setForeground(VERMELHO);
-            sb.append("Deu ").append(r.sorteado()).append(". Você errou 😕");
+            sb.append("Deu ").append(r.sorteado()).append(". Você errou ");
             if (r.perdeuNivel()) {
                 sb.append("  Voltou ao nível 1.");
             }
@@ -151,17 +151,17 @@ public class JogoPanel extends JPanel {
         String chance = String.format(Locale.US, "%.0f%%", jogo.chanceDeAcerto() * 100);
         switch (h) {
             case SORTE -> {
-                lblHumor.setText("🍀 Moeda com SORTE — chance de acerto: " + chance);
+                lblHumor.setText(" Moeda com SORTE — chance de acerto: " + chance);
                 lblHumor.setForeground(VERDE);
                 moeda.setAura(new Color(47, 158, 68, 90));
             }
             case AZAR -> {
-                lblHumor.setText("💀 Moeda com AZAR — chance de acerto: " + chance);
+                lblHumor.setText(" Moeda com AZAR — chance de acerto: " + chance);
                 lblHumor.setForeground(VERMELHO);
                 moeda.setAura(new Color(224, 49, 49, 90));
             }
             default -> {
-                lblHumor.setText("⚖ Moeda neutra — chance de acerto: " + chance);
+                lblHumor.setText(" Moeda neutra — chance de acerto: " + chance);
                 lblHumor.setForeground(CINZA);
                 moeda.setAura(new Color(0, 0, 0, 0));
             }
