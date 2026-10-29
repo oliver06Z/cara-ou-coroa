@@ -7,8 +7,8 @@ Jogo de cara ou coroa em **Java (Swing)** onde a sua sorte muda conforme você a
 - Você começa no **nível 1** com a moeda **neutra** (50% de chance de acerto).
 - A cada **3 acertos seguidos** você sobe de nível.
 - Ao subir de nível, a moeda muda de humor **aleatoriamente**:
-  - 🍀 **Sorte**: aumenta a sua chance de acerto
-  - 💀 **Azar**: diminui a sua chance de acerto
+  -  **Sorte**: aumenta a sua chance de acerto
+  -  **Azar**: diminui a sua chance de acerto
 - O efeito cresce com o nível: **+/- 5% por nível**, até no máximo **30%** (chance entre 20% e 80%).
 - Se você **errar**, volta ao nível 1 e a moeda fica neutra.
 
